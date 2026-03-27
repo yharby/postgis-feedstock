@@ -68,9 +68,9 @@ fi
     --with-gettext \
     --with-raster \
     --with-topology \
+    --with-protobuf \
     --disable-nls \
     --without-interrupt-tests \
-    --without-protobuf \
     || (cat config.log && exit 1)
 
 # Ensure upgrade SQL exists for utils/postgis_restore_data.generated
