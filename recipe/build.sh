@@ -5,6 +5,14 @@ set -e
 
 export CPPBIN="${CPP}"
 
+# Newer protobuf-c dropped the standalone protoc-c binary; provide a shim
+# that delegates to protoc (which uses protoc-gen-c as a plugin).
+cat > "${BUILD_PREFIX}/bin/protoc-c" << 'EOF'
+#!/bin/bash
+exec protoc "$@"
+EOF
+chmod +x "${BUILD_PREFIX}/bin/protoc-c"
+
 ./autogen.sh
 
 # OSX seems to be having trouble finding stdc++

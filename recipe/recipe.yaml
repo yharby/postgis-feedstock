@@ -28,6 +28,7 @@ requirements:
     - perl 5.*
     - libxslt
     - gettext-tools
+    - protobuf-c
   host:
     - cunit
     - libgdal-core
@@ -43,15 +44,19 @@ requirements:
     - liblzma-devel
   run:
     - postgresql
+    - protobuf-c
 
 tests:
   - files:
       recipe:
         - test_data
+        - run_test.sh
+        - pg.sh
     script:
       - shp2pgsql test_data/test.shp
       - pgsql2shp
       - raster2pgsql
+      - bash run_test.sh
 
 about:
   license: GPL-2.0-or-later
