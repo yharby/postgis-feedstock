@@ -187,5 +187,6 @@ Feedstock Maintainers
 * [@dwnoble](https://github.com/dwnoble/)
 * [@mxr-conda](https://github.com/mxr-conda/)
 * [@sodre](https://github.com/sodre/)
+* [@travishathaway](https://github.com/travishathaway/)
 * [@xylar](https://github.com/xylar/)
 
