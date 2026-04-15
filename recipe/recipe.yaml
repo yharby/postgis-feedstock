@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.6.2"
+  version: "3.6.3"
 
 package:
   name: postgis
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/postgis/postgis/archive/${{ version }}.tar.gz
-  sha256: 607a4d21c017e5283e15d2d977c9b7f575ddfc672afdee81fc84a2d823db4ba5
+  sha256: 3ab7714ff1d0f7944855d21546d24e5f7ecf6b931c72472a2bfa30e188a33093
 
 build:
-  number: 2
+  number: 0
   skip: win
 
 requirements:
