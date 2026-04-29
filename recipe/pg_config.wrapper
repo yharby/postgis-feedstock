@@ -20,7 +20,7 @@ get_mkvar() {
             printf '%s\n' "${PREFIX}/lib"
             ;;
         sharedir)
-            printf '%s\n' "${PREFIX}/share/postgresql"
+            printf '%s\n' "${PREFIX}/share"
             ;;
         includedir)
             printf '%s\n' "${PREFIX}/include"
